@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="manifest" href="/manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://cdn.glitch.global/d81feb0e-5571-4186-a9a0-76af988749be/New%20ierik%20logo.png?v=1721898542124" type="image/x-icon">
+    <title>iErik - Inicio</title>
+    <style>
+        body {
+            font-family: 'Sans Serif';
+            background-color: #2ccaf0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #33d7ff;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            background-color: #33a8ff;
+            overflow: hidden;
+           }
+                  .hola nav {
+            background-color: #fffff;
+            overflow: hidden;
+                              float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #33d7ff;
+            color: white;
+        }
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+        .video-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .video-container video {
+            width: 80%;
+            max-width: 800px;
+            border: 4px solid #4b0082;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .chat {
+            border: 2px solid #4b0082;
+            padding: 1rem;
+            margin-top: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .chat input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+            border: 2px solid #4b0082;
+            border-radius: 5px;
+        }
+        .chat input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #ff6ec7;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .chat input[type="submit"]:hover {
+            background-color: #ff1493;
+        }
+        footer {
+            background-color: #4b0082;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 2rem 0;
+        }
+        .product {
+            background-color: #fff;
+            border: 2px solid #4b0082;
+            border-radius: 10px;
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product h3 {
+            color: #4b0082;
+        }
+        .product button {
+            padding: 10px 20px;
+            background-color: #33d7ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .product button:hover {
+            background-color: #33a8ff;
+        }
+              .iniciar-sesion {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Estilo del contenedor que mostrará el nombre e icono del usuario */
+        .perfil {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative; /* Para posicionar el menú desplegable */
+        }
+
+        /* Estilo del ícono de usuario */
+        .perfil img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Estilo del menú desplegable */
+        .menu-opciones {
+            display: none;
+            position: right;
+            top: 50px;
+            right: 0;
+            background-color: #ADD8E6;
+            border: 1px solid #ccc;
+            list-style: none;
+            padding: 10px;
+            margin-top: 10px;
+            z-index: 1;
+        }
+
+        .menu-opciones li {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .menu-opciones li:hover {
+            background-color: 	#B0E0E6;
+        }
+      .ia-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f7f7f8;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    margin: auto;
+  }
+
+  #userInput {
+    flex: 1;
+    resize: none;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+    transition: border 0.2s ease-in-out;
+  }
+
+  #userInput:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+  }
+
+    </style>
+</head>
+<body>
+
+
+
+
+<header> 
+         <img src="https://cdn.glitch.global/d81feb0e-5571-4186-a9a0-76af988749be/New%20ierik%20logo.png?v=1716489849604" alt="Logo" height="280px">                                                                                                                                                                                                                                                 
+  <h2>
+  Bienvenid@ a esta pagina web
+  </h2>
+  <div class="product">
+     <button class="iniciar-sesion" id="iniciarSesionBtn">Iniciar sesión</button>
+   
+  </div>
+     
+ 
+
+<!-- Contenedor que mostrará el nombre e icono del usuario -->
+<div class="perfil" id="perfilUsuario" style="display:none;">
+    <img src="https://cdn.glitch.global/d81feb0e-5571-4186-a9a0-76af988749be/Finder.png?v=1718642111168" alt="Icono de usuario">
+    <span id="nombreUsuario"></span>
+
+    <!-- Menú desplegable (aparece solo después de iniciar sesión y tocar el nombre) -->
+    <ul class="menu-opciones" id="menuOpciones">
+        <li id="cerrarSesion">Cerrar sesión</li>
+    </ul>
+</div>
+  </header>
+  
+    <nav>
+        <a href="#home">Inicio</a>
+        <a href="index1.html">En Directo</a>
+        <a href="videos.html">Videos</a>
+        <a href="contact.html">Contacto</a>
+        <a href="eventos.html">Eventos</a>
+              <a href="launcher.html">Launcher</a>
+      <a href="donaciones.html">Donaciones</a>
+   
+    </nav>
+
+    <main>
+         <div class="chat">
+            <h3>📦Nuevo unboxing realizado - Bateria externa magsafe copia exacta apple, el iphone detecta la original📦</h3>
+            <p>
+              Me he comprado una bateria externa de magsafe super chula, la he probado y funciona genial.
+               La he comprado en Amazon y me ha costado 20 euros pero te la vendo en un enlace mas barato, la recomiendo mucho. Se pareze mucho a la de Apple pero es mucho mas barata.
+            </p>
+            <form action="https://cdn.glitch.global/d81feb0e-5571-4186-a9a0-76af988749be/%F0%9F%93%A6%20Unboxing%20-%20Bateria%20externa%20magsafe%20%F0%9F%93%A6.mp4?v=1743522042864">
+            <button type="submit"> <h3>Toca aqui para ver el unboxing</h3> </button>
+            </form>
+            <form onsubmit="alert('Aun no esta en venta, espere un poco...'); return false;">
+                <button> <h3>Toca aqui para comprar la bateria</h3> </button>
+                </form>
+            </div>
+                            
+        <section id="home">
+              <p>Que le gustaria hacer?</p>
+            <p>Seleccione algo</p>
+
+            <div class="product-grid">
+                <div class="product">
+                   <form action="https://ierik.glitch.me/index1.html" method="GET">
+                    <img src="https://cdn.glitch.global/d81feb0e-5571-4186-a9a0-76af988749be/Activity%20Monitor.png?v=1743529532120" alt="Retrasmision en directo">
+                    <h3>Retrasmision en directo</h3>
+                    <p>Aqui puedes ver nuestras retrasmisiones en directo</p>
+                   <button>Entrar</button>
+              </form>
+                </div>
+                <div class="product">
+                   <form action="videos.html" method="GET">
+                    <img src="https://cdn.glitch.global/d81feb0e-5571-4186-a9a0-76af988749be/youtube.png?v=1718643098658" alt="Retrasmision en directo">
+                    <h3>Videos</h3>
+                    <p>Aqui puedes ver nuestros videos i directos ya emitidos</p>
+                   <button>Entrar</button>
+              </form>
+                </div>
+                <div class="product">
+                   <form action="https://ierik.glitch.me/contact.html" method="GET">
+                    <img src="https://cdn.glitch.global/d81feb0e-5571-4186-a9a0-76af988749be/Contacts.png?v=1718642200504" alt="Retrasmision en directo">
+                    <h3>Contacta</h3>
+                    <p>Aqui puedes contactar con nosotros</p>
+                   <button>Entrar</button>
+              </form>
+                </div>
+                <div class="product">
+                   <form action="https://ierik.glitch.me/eventos.html" method="GET">
+                    <img src="https://cdn.glitch.global/d81feb0e-5571-4186-a9a0-76af988749be/Mail.png?v=1718642067633" alt="Retrasmision en directo">
+                    <h3>Eventos</h3>
+                    <p>Aqui puedes ver todos los proximos eventos</p>
+                   <button>Entrar</button>
+              </form>
+            </div>
+               <div class="product">
+                   <form action="https://ierik.glitch.me/donaciones.html" method="GET">
+                    <img src="https://cdn.glitch.global/d81feb0e-5571-4186-a9a0-76af988749be/Launchpad_Alt.png?v=1743532784418" alt="Retrasmision en directo">
+                    <h3>Donaciones</h3>
+                    <p>Aqui nos puedes donar</p>
+                   <button>Entrar</button>
+              </form>
+            </div>
+                <div class="product">
+                   <form action="https://ierik.glitch.me/launcher.html" method="GET">
+                    <img src="https://cdn.glitch.global/d81feb0e-5571-4186-a9a0-76af988749be/Launchpad.png?v=1743532758555" alt="Retrasmision en directo">
+                    <h3>Launcher</h3>
+                    <p>Aqui puedes ver todas las paginas que tienen que ver con iErik</p>
+                   <button>Entrar</button>
+              </form>
+            </div>
+          </section>
+<nav class="hola">
+  <div class="product">
+      <p>&copy; 2024 iErik. Todos los derechos reservados.</p>
+  </div>
+                
+          </nav>
+          </main>
+
+  
+<script>
+    // Obtener el parámetro 'name' de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const nombreUsuarioURL = urlParams.get('name');
+
+    // Elementos del DOM
+    const iniciarSesionBtn = document.getElementById('iniciarSesionBtn');
+    const perfilUsuario = document.getElementById('perfilUsuario');
+    const nombreUsuario = document.getElementById('nombreUsuario');
+    const menuOpciones = document.getElementById('menuOpciones');
+    const cerrarSesion = document.getElementById('cerrarSesion');
+
+    // Verificar si ya hay un nombre de usuario en la URL
+    if (nombreUsuarioURL) {
+        // Si hay un nombre en la URL, mostrar la interfaz de usuario
+        mostrarPerfil(nombreUsuarioURL);
+    }
+
+    // Función que muestra la alerta de inicio de sesión
+    iniciarSesionBtn.addEventListener('click', function() {
+        // Redirigir a la página de inicio de sesión
+        window.location.href = 'https://erikaccount.glitch.me/logins/ierik.html';
+    });
+
+    // Función que muestra el perfil del usuario y oculta el botón de inicio de sesión
+    function mostrarPerfil(nombre) {
+        iniciarSesionBtn.style.display = 'none'; // Ocultar el botón
+        perfilUsuario.style.display = 'flex'; // Mostrar el perfil
+        nombreUsuario.textContent = nombre; // Mostrar el nombre
+    }
+
+    // Función para mostrar/ocultar el menú de opciones cuando se toca el perfil
+    perfilUsuario.addEventListener('click', function() {
+        menuOpciones.style.display = menuOpciones.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Cerrar sesión: eliminar el nombre guardado y reiniciar la página
+    cerrarSesion.addEventListener('click', function() {
+        // Redirigir a index.html sin parámetros
+        window.location.href = 'index.html';
+    });
+
+</script>
+  <script>
+        const responseContainer = document.getElementById('responseContainer');
+
+        async function sendChat() {
+            const userInput = document.getElementById('userInput').value;
+            if (!userInput.trim()) {
+                alert('Please type a message.');
+                return;
+            }
+
+            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer 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'  // Replace YOUR_API_KEY with your actual OpenAI API key
+                },
+                body: JSON.stringify({
+                    model: "gpt-4", // or use another model like gpt-3.5-turbo
+                    messages: [{role: "user", content: userInput}]
+                })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                displayError(`Failed to fetch response: ${data.error?.message || 'Unknown error'}`);
+                return;
+            }
+            console.log(data);
+            displayResponse(data.choices[0].message.content);
+        }
+
+        function displayResponse(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.textContent = "Erik Bolt: " + message;
+            responseContainer.appendChild(messageDiv);
+        }
+
+        function displayError(error) {
+            const errorDiv = document.createElement('div');
+            errorDiv.textContent = error;
+            errorDiv.style.color = 'red';
+            responseContainer.appendChild(errorDiv);
+        }
+    </script>
+ </body>
+</html>
