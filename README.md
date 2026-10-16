@@ -4,4 +4,4 @@
 - 📫 How to reach me: I will not put my mail yet
 - 😄 Pronouns: He
 - ⚡ Fun fact: I'm a young age developer and i'm spanish. I speak spanish and english...
-- 😉 My website personal website is: https://ierik.vercel.app/
+- 😉 My website personal website is: https://erikhub.com
